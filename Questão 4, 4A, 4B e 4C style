@@ -1,0 +1,14 @@
+.THIS {
+    font-size: 18px;
+    color:#737dff;
+}
+.THIS label {
+    font-size: 18px;
+}
+.THIS.recordEditForm {
+  font-size: 18px;
+}
+.THIS.title{
+    font-size:18px;
+    text-align:center;
+}
