@@ -17,9 +17,9 @@
         <!-- Acrescentando mais nomes -->
      
 		
-        <lightning:inputField fieldName="Data_da_Compra__c" id="field"/> 
-        <lightning:inputField fieldName="Preco_unitario__c" id="field" />
-        <lightning:inputField fieldName="Preco_total__c" id="field"/>
+        <lightning:inputField fieldName="Data_da_Compra__c" aura:id="field"/> 
+        <lightning:inputField fieldName="Preco_unitario__c" aura:id="field" />
+        <lightning:inputField fieldName="Preco_total__c"    auraid="field"/>
            
         
         
