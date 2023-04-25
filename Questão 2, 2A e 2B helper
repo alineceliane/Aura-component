@@ -1,0 +1,28 @@
+({
+ getAccounts : function(component) {
+  //usando o método da classe do APEX OpportunityC
+  //Atributindo esse método dentro de um componente
+  let action = component.get("c.getAccount");
+  //reponse faz um teste com o servidor e obtem uma resposta positiva dele
+        //SetCallBack = define a função de retorno de uma chamada que é executada após 
+        //o retorno de uma ação do apex
+        
+        action.setCallback(this, function(response){
+          //a função setCallBack obtem um resultado positivo da consulta no servidor.
+          // status ou estado"SUCCESS", "ERROR" e "INCOMPLETE".  
+          let state = response.getState();
+            console.log(state);
+            
+            //Verifica se o estado(Status) é positivo, caso seja, ele atribuir um valor para 
+            //a varivel que eu preciso preencher
+            if(state == "SUCCESS"){
+                component.set("v.acc", response.getReturnValue());
+                console.log(response.getReturnValue());
+                     
+        }
+                           
+ });
+        //da acesso a biblioteca do Aura e enfileira as ações do front do servidor
+        $A.enqueueAction(action);
+    }
+})
