@@ -1,0 +1,8 @@
+public class Accountc {
+@AuraEnabled
+    public static List<Account> getAccount(){
+        return[Select Name, ParentId, CloseDate 
+               From Account
+              Order by createdDate Desc Limit 5];
+    }
+}
