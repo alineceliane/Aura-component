@@ -1,0 +1,8 @@
+public class accountContatados {
+@AuraEnabled
+    public static List<Account> getAccount(){
+        return[Select  Name, Contatado__c, Rating
+               From Account 
+               Where Rating='Hot'];
+    }
+}
