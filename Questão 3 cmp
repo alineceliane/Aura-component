@@ -1,0 +1,21 @@
+<aura:component controller="accountContatados" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="accs" type="Account[]"/>
+    <!-- Em qual tempo você quer que eu realize todo o processo que você estabilizou dentro das ações e do helper -->
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+                  <lightning:card iconName="standard:Account" title="Contas buscadas">
+    
+        <div class ='slds-p-arround_medium'>
+            <!-- Realizar um for para acessar coisas -->
+   <aura:iteration items="{!v.accs}" var="account"> 
+                <!--For-->
+                    <p>-------------------------</p>
+                    <p>{!account.Name}</p>
+                    <p>{!account.Contatado__c }</p>
+       				<p>{!account.Rating}</p>
+   </aura:iteration>
+          </div>
+                      
+       </lightning:card>
+</aura:component>
